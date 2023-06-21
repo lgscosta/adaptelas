@@ -21,15 +21,14 @@ class GerenciadorProdutos:
 
     # Método de leitura e criação de produtos
     def ler_arquivo_produtos(self, nome_arquivo):
-        '''TESTAR ARQUIVO VAZIO OU FORMATO ERRADO'''
         produtos = {} # Inicialmente há uma lista vazia de produtos
         with open(nome_arquivo, 'r') as arquivo: # Abertura do arquivo
             for linha in arquivo:
                 dados = linha.strip().split() # Lê todos os dados e separa em uma lista
                 nome = " ".join(dados[:-2])  # Essa função join vai unir todos os elementos até antes do penúltimo
+                # Não há tratamento da entrada
                 quantidade = int(dados[-2]) # Atribui o valor do penúltimo elemento
                 preco_unitario = float(dados[-1].replace(',', '.')) # Atribui o valor do último elemento e substitui a vírgula
-                '''TESTAR ENTRADA COM .'''
                 produtos[nome.lower()] = Produto(nome, quantidade, preco_unitario) # Cria um produto com lower case no nome
 
         arquivo.close()  # Fecha o arquivo após terminar a leitura
@@ -85,7 +84,6 @@ class GerenciadorProdutos:
             preco_unitario = self.verificar_disponibilidade(produto, quantidade) # Verifica disponibilidade
 
             if preco_unitario == -2: # Caso retorne -2 significa que o pedido foi maior que a quantidade disponível e o cliente optou por pegar a quantidade máxima disponível
-                '''TESTAR REDUNDÂNCIA'''
                 if produto in self.produtos:
                     prod = self.produtos[produto]
                     quantidade = prod.quantidade
@@ -127,15 +125,15 @@ def main():
     # Nome do arquivo de produtos
     nome_arquivo_produtos = 'produtos.txt'
 
-    # Cria uma instância do GerenciadorProdutos
-    gerenciador = GerenciadorProdutos(nome_arquivo_produtos)
-
     print("╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮")
     print("┃                                         ┃")
     print("┃          \033[95mBem-Vinda à Lanchonete       \033[97m  ┃")
     print("┃     \033[95m   ✨✨ Pão com Adaptela ✨✨    \033[97m   ┃")
     print("┃                                         ┃")
     print("╰━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╯")
+
+    # Cria uma instância do GerenciadorProdutos
+    gerenciador = GerenciadorProdutos(nome_arquivo_produtos)
 
     pedido = {} # Inicialmente vazio
     while True: # Enquanto não for parado
