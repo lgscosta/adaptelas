@@ -1,0 +1,20 @@
+Hamburguer simples 15 10,00
+Hamburguer duplo 15 15,00
+Cheeseburger 15 12,00
+Cheeseburger duplo 10 18,00
+Cheeseburger com bacon 15 14,00
+Cheeseburger com bacon duplo 10 20,00
+Batata frita pequena 20 6,00
+Batata frita média 20 8,00
+Batata frita grande 20 10,00
+Nuggets 4 8,00
+Hot dog simples 5 7,00
+Hot dog completo 5 10,00
+Sanduiche de frango 4 12,00
+Sanduiche de peito de peru 3 12,00
+Sanduiche vegetariano 2 10,00
+Refrigerante 10 6,00
+Suco natural 0 5,00
+Milkshake Ovomaltine 3 10,00
+Milkshake Morango 3 10,00
+Milkshake Ninho 3 10,00

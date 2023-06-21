@@ -1,0 +1,8 @@
+Resumo do pedido:
+  Refrigerante - 3 unidades - R$ 18.00
+  Cheeseburger - 3 unidades - R$ 36.00
+  Milkshake ovomaltine - 1 unidades - R$ 10.00
+  Milkshake morango - 1 unidades - R$ 10.00
+  Milkshake ninho - 1 unidades - R$ 10.00
+
+Total pago: R$ 84.00
