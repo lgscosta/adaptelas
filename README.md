@@ -1,7 +1,7 @@
 # ✨ Pão com Adaptela ✨
 
 ## Descrição
-Este é um projeto desenvolvido como trabalho final do curso **Adaptelas** e parte do meu aprendizado em Python. Ele consiste em uma aplicação que gerencia um pedido em lanchonete através de um cardápio presente no arquivo **produtos.txt**.
+Este é um projeto desenvolvido como trabalho final do curso **Adaptelas** e parte do meu aprendizado em Python. Ele consiste em uma aplicação que gerencia um pedido em lanchonete através de um cardápio presente no arquivo **estoque.txt**.
 
 ## Recursos
 - **Gerenciamento de Produtos:** O código possui uma classe GerenciadorProdutos que permite o gerenciamento de produtos, incluindo a leitura de produtos de um arquivo, verificação de disponibilidade, atualização de quantidade e cálculo do valor total da compra.
@@ -18,7 +18,7 @@ Este é um projeto desenvolvido como trabalho final do curso **Adaptelas** e par
 
 ## Requisitos do Sistema
 - Python 3.6 ou superior instalado no sistema.
-- Arquivo de produtos (produtos.txt) contendo o cardápio e os dados dos produtos sem acento e no formato:
+- Arquivo de produtos (estoque.txt) contendo o cardápio e os dados dos produtos sem acento e no formato:
 ```
 Produto(string) Quantidade-em-Estoque(int) Preço-Unitário(float)
 ```
@@ -30,3 +30,6 @@ Produto(string) Quantidade-em-Estoque(int) Preço-Unitário(float)
 ## Como Usar
 1. Execute o arquivo principal: `python3 poo.py`
 2. Siga as instruções exibidas no terminal para interagir com a aplicação.
+
+## Observações
+- O arquivo **produtos.txt** é um backup do cardápio original.

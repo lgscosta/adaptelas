@@ -119,11 +119,19 @@ class GerenciadorProdutos:
                 print("Arquivo de pedido criado com sucesso!")
 
             arquivo.close()  # Fechar o arquivo após terminar a leitura
+    
+    # Método de impressão do estoque final
+    def imprimir_estoque(self):
+        with open("estoque.txt", 'w') as arquivo: # Abre arquivo para escrita
+            for produto, dados in self.produtos.items():
+                # Capitalize faz a primeira letra ser maiúscula
+                arquivo.write(f"{produto.capitalize()} {dados.quantidade} {dados.preco_unitario:.2f}\n") 
 
+        arquivo.close()  # Fechar o arquivo após terminar a leitura
 
 def main():
     # Nome do arquivo de produtos
-    nome_arquivo_produtos = 'produtos.txt'
+    nome_arquivo_produtos = 'estoque.txt'
 
     print("╭━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╮")
     print("┃                                         ┃")
@@ -160,12 +168,14 @@ def main():
 
     # Exibe o valor total da compra
     print(f"Valor total da compra: \033[95mR${valor_compra:.2f}\033[97m")
-    bit = input("\033[95mDeseja imprimir o resumo? (s/n) \033[97m")
+    bit = input("\033[95mDeseja imprimir o recibo? (s/n) \033[97m")
     
     # Verificação de procedimento
     gerenciador.escrever_arquivo_pedido(resumo, valor_compra, bit)
 
     print("\nObrigada pela preferência! \033[95m<3")
+
+    gerenciador.imprimir_estoque() # Gera arquivo de estoque
 
 # Chamada da main
 if __name__ == "__main__":
