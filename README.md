@@ -1,7 +1,7 @@
 # ✨ Pão com Adaptela ✨
 
 ## Descrição
-Este é um projeto desenvolvido como trabalho final do curso **Adaptelas** e parte do meu aprendizado em Python. Ele consiste em uma aplicação que gerencia um pedido em lanchonete através de um cardápio presente no arquivo produtos.txt.
+Este é um projeto desenvolvido como trabalho final do curso **Adaptelas** e parte do meu aprendizado em Python. Ele consiste em uma aplicação que gerencia um pedido em lanchonete através de um cardápio presente no arquivo **produtos.txt**.
 
 ## Recursos
 - **Gerenciamento de Produtos:** O código possui uma classe GerenciadorProdutos que permite o gerenciamento de produtos, incluindo a leitura de produtos de um arquivo, verificação de disponibilidade, atualização de quantidade e cálculo do valor total da compra.
